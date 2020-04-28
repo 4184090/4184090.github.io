@@ -67,164 +67,6 @@
       <h1 class="page-type-title"></h1>
       
         
-          <article id="post-Centos7防火墙配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/">Centos7防火墙配置</a>
-    </h2>
-  
-  
-  <div class="article-topping">
-    <i class="fe fe-umbrella"></i>
-  </div>
-
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
-
-<h1 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
-
-<h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9jwuehv0000hklkdj3ia8ae" class="article-share-link">
-                                            分享
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-Centos7系统Docker的安装配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">Centos7系统Docker的安装配置</a>
-    </h2>
-  
-  
-  <div class="article-topping">
-    <i class="fe fe-umbrella"></i>
-  </div>
-
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Docker%E6%95%99%E7%A8%8B/">Docker教程</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
-
-<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-
-<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
-
-<p>将下面的配置复制进去即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
-</ul>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-id="ck9jwueit0005hklkh3b948o3" class="article-share-link">
-                                            分享
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
           <article id="post-Hexo搭建个人静态博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
@@ -324,11 +166,169 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" data-id="ck9jwueiy0007hklk18vw60r7" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" data-id="ck9jx0iz10000cslk7icb41et" class="article-share-link">
                                             分享
                                         </a>
                                         
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-Centos7防火墙配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/">Centos7防火墙配置</a>
+    </h2>
+  
+  
+  <div class="article-topping">
+    <i class="fe fe-umbrella"></i>
+  </div>
+
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
+
+<h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
+
+<h1 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
+
+<h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9jx0iza0002cslk3znb77s4" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-Centos7系统Docker的安装配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">Centos7系统Docker的安装配置</a>
+    </h2>
+  
+  
+  <div class="article-topping">
+    <i class="fe fe-umbrella"></i>
+  </div>
+
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Docker%E6%95%99%E7%A8%8B/">Docker教程</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+
+<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<p>将下面的配置复制进去即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
+</ul>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-id="ck9jx0izf0005cslk8l8qgamh" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
 
                                     </footer>
 
