@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.it-max.cn/"/>
-  <updated>2020-04-28T12:32:45.990Z</updated>
+  <updated>2020-04-28T14:38:10.792Z</updated>
   <id>http://www.it-max.cn/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
     <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T12:32:45.990Z</updated>
+    <updated>2020-04-28T14:38:10.792Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;1、安装必要依赖&quot;&gt;&lt;a href=&quot;#1、安装必要依赖&quot; class=&quot;headerlink&quot; title=&quot;1、安装必要依赖&quot;&gt;&lt;/a&gt;1、安装必要依赖&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
+      &lt;h1 id=&quot;1、安装必要依赖&quot;&gt;&lt;a href=&quot;#1、安装必要依赖&quot; class=&quot;headerlink&quot; title=&quot;1、安装必要依赖&quot;&gt;&lt;/a&gt;1、安装必要依赖&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install -y yum-utils device-mapper-persistent-data lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;2、添加软件源信息&quot;&gt;&lt;a href=&quot;#2、添加软件源信息&quot; class=&quot;headerlink&quot; title=&quot;2、添加软件源信息&quot;&gt;&lt;/a&gt;2、添加软件源信息&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -50,17 +46,13 @@
     <link href="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</id>
     <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T12:31:54.189Z</updated>
+    <updated>2020-04-28T14:38:21.930Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;1、查看firewall服务状态&quot;&gt;&lt;a href=&quot;#1、查看firewall服务状态&quot; class=&quot;headerlink&quot; title=&quot;1、查看firewall服务状态&quot;&gt;&lt;/a&gt;1、查看firewall服务状态&lt;/h1&gt;&lt;figure
-        
-      
+      &lt;h1 id=&quot;1、查看firewall服务状态&quot;&gt;&lt;a href=&quot;#1、查看firewall服务状态&quot; class=&quot;headerlink&quot; title=&quot;1、查看firewall服务状态&quot;&gt;&lt;/a&gt;1、查看firewall服务状态&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;systemctl status firewalld&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;2、查看firewall的状态&quot;&gt;&lt;a href=&quot;#2、查看firewall的状态&quot; class=&quot;headerlink&quot; title=&quot;2、查看firewall的状态&quot;&gt;&lt;/a&gt;2、查看firewall的状态&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;firewall-cmd --state&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -77,17 +69,11 @@
     <link href="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</id>
     <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T12:24:37.637Z</updated>
+    <updated>2020-04-28T14:37:47.345Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;1-安装Git&quot;&gt;&lt;a href=&quot;#1-安装Git&quot; class=&quot;headerlink&quot; title=&quot;1. 安装Git&quot;&gt;&lt;/a&gt;1.
-        
-      
+      &lt;h1 id=&quot;1-安装Git&quot;&gt;&lt;a href=&quot;#1-安装Git&quot; class=&quot;headerlink&quot; title=&quot;1. 安装Git&quot;&gt;&lt;/a&gt;1. 安装Git&lt;/h1&gt;&lt;p&gt;Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Git教程&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     

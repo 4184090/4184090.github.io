@@ -76,16 +76,18 @@
 
                                 
 
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
+                                        <div class="article-entry" itemprop="articleBody">
+											
 
 
-                                            
+											
 
-                                                
-                                                                    <h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+											
+												<h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
 
 <h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
 
@@ -94,10 +96,10 @@
 <h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
 
 
-                                                                        
-                                    </div>
+											
+										</div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9jy3t580001mclk29j90q33" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9k0rbnn000288lk66eggk7t" class="article-share-link">
                                             分享
                                         </a>
                                         

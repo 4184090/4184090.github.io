@@ -67,164 +67,6 @@
       <h1 class="page-type-title"></h1>
       
         
-          <article id="post-Centos7系统Docker的安装配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">Centos7系统Docker的安装配置</a>
-    </h2>
-  
-  
-  <div class="article-topping">
-    <i class="fe fe-umbrella"></i>
-  </div>
-
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Docker%E6%95%99%E7%A8%8B/">Docker教程</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
-
-<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-
-<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
-
-<p>将下面的配置复制进去即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
-</ul>
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-id="ck9jy3t4z0000mclke7ucdhu8" class="article-share-link">
-                                            分享
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
-          <article id="post-Centos7防火墙配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
-
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h2 itemprop="name">
-      <a class="article-title" href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/">Centos7防火墙配置</a>
-    </h2>
-  
-  
-  <div class="article-topping">
-    <i class="fe fe-umbrella"></i>
-  </div>
-
-
-
-
-
-            </header>
-            
-
-                
-                    <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
-</a>
-                            
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
-  </div>
-
-                    </div>
-                    
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    <h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
-
-<h1 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
-
-<h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
-
-
-                                                                        
-                                    </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9jy3t580001mclk29j90q33" class="article-share-link">
-                                            分享
-                                        </a>
-                                        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
-
-                                    </footer>
-
-    </div>
-
-    
-
-                
-
-</article>
-        
           <article id="post-Hexo搭建个人静态博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
@@ -263,72 +105,157 @@
 
                         
 
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
+                                        <div class="article-entry" itemprop="articleBody">
+											
 
 
-                                            
+											
 
-                                                
-                                                                    <h1 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h1><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a><br>windows：到git官网上下载,<a href="https://gitforwindows.org/" target="_blank" rel="noopener">Download git</a>,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。<br>linux：对linux来说实在是太简单了，因为最早的git就是在linux上编写的，只需要一行代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h1><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>windows：nodejs选择LTS版本就行了。<br>linux：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
-
-<p>安装完后，打开命令行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>检查一下有没有安装成功<br>顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用。</p>
-<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3. 安装Hexo"></a>3. 安装Hexo</h1><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹hexo，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。<br>输入命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>依旧用hexo -v查看一下版本<br>至此就全部安装完了。<br>接下来初始化一下hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
-<p>这个blog可以自己取什么名字都行，然后</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog //进入这个myblog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>新建完成后，指定文件夹目录下有：</p>
-<p>node_modules: 依赖包<br>public：存放生成的页面<br>scaffolds：生成文章的一些模板<br>source：用来存放你的文章<br>themes：主题<br>_config.yml: 博客的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>打开hexo的服务，在浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">localhost:4000</a>就可以看到你生成的博客了。<br>然后使用ctrl+c可以把服务关掉。</p>
-<h1 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4.GitHub创建个人仓库"></a>4.GitHub创建个人仓库</h1><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br>点击create repository。</p>
-<h1 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h1><p>回到你的git bash中，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-
-<p>如果没有的话，说明是第一次，需要设置一下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的github用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的github邮箱"</span></span><br></pre></td></tr></table></figure>
-
-<p>然后创建SSH,一路回车</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的github邮箱"</span></span><br></pre></td></tr></table></figure>
-
-<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。<br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。<br>在gitbash中，查看是否成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<h1 id="6-将Hexo部署到GitHub"><a href="#6-将Hexo部署到GitHub" class="headerlink" title="6.将Hexo部署到GitHub"></a>6.将Hexo部署到GitHub</h1><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>其中<br>hexo clean 清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写<br>注意deploy时可能要你输入username和password。<br>得到下图就说明部署成功了，过一会儿就可以在 YourgithubName.github.io这个网站看到你的博客了！！</p>
-
-                                                                        
-                                    </div>
+											
+												<h1 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h1><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
+												
+													<a class="article-more-link" href="/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">阅读全文...</a>
+												
+											
+										</div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" data-id="ck9jy3t65000cmclkc5j90e4v" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" data-id="ck9k0rbns000588lk5ghi5ui3" class="article-share-link">
                                             分享
                                         </a>
                                         
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-Centos7系统Docker的安装配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">Centos7系统Docker的安装配置</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Docker%E6%95%99%E7%A8%8B/">Docker教程</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                        <div class="article-entry" itemprop="articleBody">
+											
+
+
+											
+
+											
+												<h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+												
+													<a class="article-more-link" href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">阅读全文...</a>
+												
+											
+										</div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-id="ck9k0rbnf000088lk5bzt1jrx" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
+
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-Centos7防火墙配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/">Centos7防火墙配置</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
+</a>
+                            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
+  </div>
+
+                    </div>
+                    
+
+                        
+
+                                        <div class="article-entry" itemprop="articleBody">
+											
+
+
+											
+
+											
+												<h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
+												
+													<a class="article-more-link" href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/">阅读全文...</a>
+												
+											
+										</div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9k0rbnn000288lk66eggk7t" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
 
                                     </footer>
 
