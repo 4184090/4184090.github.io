@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Centos7系统Docker的安装配置</title>
+    <url>/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+
+<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<p>将下面的配置复制进去即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Docker教程</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Centos7防火墙配置</title>
     <url>/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
@@ -81,36 +111,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7系统Docker的安装配置</title>
-    <url>/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
-
-<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-
-<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
-
-<p>将下面的配置复制进去即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Docker教程</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
-        <tag>Docker</tag>
       </tags>
   </entry>
 </search>
