@@ -34,7 +34,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-Hexo搭建个人静态博客" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-Hexo-Create-Blog" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -55,7 +55,7 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="article-date">
+                        <a href="/2020/04/28/Hexo-Create-Blog/" class="article-date">
   <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
 </a>
                             
@@ -76,27 +76,28 @@
 
                                 
 
-                                        <div class="article-entry" itemprop="articleBody">
-											
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
 
 
-											
+                                            
 
-											
-												<h1 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h1><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
+                                                
+                                                                    <p>Hexo是一个快速，简单且功能强大的博客框架。您使用<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。</p>
 <a id="more"></a>
 
+<h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h2><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
 <p>windows：到git官网上下载,<a href="https://gitforwindows.org/" target="_blank" rel="noopener">Download git</a>,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。<br>linux：对linux来说实在是太简单了，因为最早的git就是在linux上编写的，只需要一行代码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h1><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>windows：nodejs选择LTS版本就行了。<br>linux：</p>
+<h2 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h2><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>windows：nodejs选择LTS版本就行了。<br>linux：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
 
 <p>安装完后，打开命令行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
 <p>检查一下有没有安装成功<br>顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用。</p>
-<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3. 安装Hexo"></a>3. 安装Hexo</h1><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹hexo，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。<br>输入命令</p>
+<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3. 安装Hexo"></a>3. 安装Hexo</h2><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹hexo，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。<br>输入命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>依旧用hexo -v查看一下版本<br>至此就全部安装完了。<br>接下来初始化一下hexo</p>
@@ -110,8 +111,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 <p>打开hexo的服务，在浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">localhost:4000</a>就可以看到你生成的博客了。<br>然后使用ctrl+c可以把服务关掉。</p>
-<h1 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4.GitHub创建个人仓库"></a>4.GitHub创建个人仓库</h1><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br>点击create repository。</p>
-<h1 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h1><p>回到你的git bash中，</p>
+<h2 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4.GitHub创建个人仓库"></a>4.GitHub创建个人仓库</h2><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br>点击create repository。</p>
+<h2 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h2><p>回到你的git bash中，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
 <p>如果没有的话，说明是第一次，需要设置一下</p>
@@ -126,7 +127,7 @@
 <p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。<br>在gitbash中，查看是否成功</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<h1 id="6-将Hexo部署到GitHub"><a href="#6-将Hexo部署到GitHub" class="headerlink" title="6.将Hexo部署到GitHub"></a>6.将Hexo部署到GitHub</h1><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
+<h2 id="6-将Hexo部署到GitHub"><a href="#6-将Hexo部署到GitHub" class="headerlink" title="6.将Hexo部署到GitHub"></a>6.将Hexo部署到GitHub</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
@@ -137,10 +138,10 @@
 
 <p>其中<br>hexo clean 清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写<br>注意deploy时可能要你输入username和password。<br>得到下图就说明部署成功了，过一会儿就可以在 YourgithubName.github.io这个网站看到你的博客了！！</p>
 
-											
-										</div>
+                                                                        
+                                    </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" data-id="ck9k0rbns000588lk5ghi5ui3" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/" data-id="ck9mileag0006bwlkgefs86jq" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -154,7 +155,7 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-nav-link">
+      <a href="/2020/04/28/Centos7-Firewall/" class="article-nav-link">
         <strong class="article-nav-caption">前一篇</strong>
         <div class="article-nav-title">
           
@@ -202,7 +203,6 @@
 
 </article>
 </section>
-
   <footer class="footer">
   <div class="outer">
     <div class="float-right">
@@ -217,7 +217,8 @@
     <ul class="list-inline">
       <li>&copy; 2020 Monk&#39;s Blog</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://www.it-max.cn">Monk</a></li>
+      <li>Author <a href="https://www.it-max.cn">Monk</a></li>
+	  <li>Record <a href="#">豫ICP备20004811号-1</a></li>
     </ul>
   </div>
 </footer>
@@ -243,6 +244,14 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/categories">分类</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
       </li>
     
       <li class="nav-item">
@@ -321,5 +330,16 @@
 <script src="/js/ocean.js"></script>
 
 
-</body>
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+   
+<script src="/js/anime.min.js"></script>
+
+   
+<script src="/js/fireworks.js"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

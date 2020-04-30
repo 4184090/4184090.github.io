@@ -34,7 +34,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-Centos7系统Docker的安装配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-Centos7-Docker" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -55,7 +55,7 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-date">
+                        <a href="/2020/04/28/Centos7-Docker/" class="article-date">
   <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
 </a>
                             
@@ -76,26 +76,27 @@
 
                                 
 
-                                        <div class="article-entry" itemprop="articleBody">
-											
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
 
 
-											
+                                            
 
-											
-												<h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
+                                                
+                                                                    <p>Docker 是一个<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 <a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>或<a href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a> 机器上，也可以实现<a href="https://baike.baidu.com/item/虚拟化/547949" target="_blank" rel="noopener">虚拟化</a>。容器是完全使用<a href="https://baike.baidu.com/item/沙箱/393318" target="_blank" rel="noopener">沙箱</a>机制，相互之间不会有任何接口。</p>
 <a id="more"></a>
 
-<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+<h2 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
 
-<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<h2 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
 
-<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+<h2 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
 
-<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+<h2 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
 
 <p>将下面的配置复制进去即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -104,10 +105,10 @@
 <li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
 </ul>
 
-											
-										</div>
+                                                                        
+                                    </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" data-id="ck9k0rbnf000088lk5bzt1jrx" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7-Docker/" data-id="ck9mile9z0000bwlk95qxbcnx" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -121,8 +122,17 @@
         
   <nav class="article-nav">
     
+      <a href="/2020/04/29/hexo-Tag-Aplayer/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            音乐插件MetingJS的支持
+          
+        </div>
+      </a>
     
-      <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-nav-link">
+    
+      <a href="/2020/04/28/Centos7-Firewall/" class="article-nav-link">
         <strong class="article-nav-caption">后一篇</strong>
         <div class="article-nav-title">Centos7防火墙配置</div>
       </a>
@@ -165,7 +175,6 @@
 
 </article>
 </section>
-
   <footer class="footer">
   <div class="outer">
     <div class="float-right">
@@ -180,7 +189,8 @@
     <ul class="list-inline">
       <li>&copy; 2020 Monk&#39;s Blog</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://www.it-max.cn">Monk</a></li>
+      <li>Author <a href="https://www.it-max.cn">Monk</a></li>
+	  <li>Record <a href="#">豫ICP备20004811号-1</a></li>
     </ul>
   </div>
 </footer>
@@ -206,6 +216,14 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/categories">分类</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
       </li>
     
       <li class="nav-item">
@@ -284,5 +302,16 @@
 <script src="/js/ocean.js"></script>
 
 
-</body>
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+   
+<script src="/js/anime.min.js"></script>
+
+   
+<script src="/js/fireworks.js"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

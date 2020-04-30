@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    Centos7防火墙配置 |
+    搜索插件hexo-gennerator-search的支持 |
     
     Monk&#39;s Blog</title>
   
@@ -34,7 +34,7 @@
 <body>
 <main class="content">
   <section class="outer">
-  <article id="post-Centos7防火墙配置" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+  <article id="post-Hexo-Generator-Search" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -42,7 +42,7 @@
                 
   
     <h1 class="article-title" itemprop="name">
-      Centos7防火墙配置
+      搜索插件hexo-gennerator-search的支持
     </h1>
   
   
@@ -55,12 +55,12 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" class="article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
+                        <a href="/2020/04/29/Hexo-Generator-Search/" class="article-date">
+  <time datetime="2020-04-29T11:50:00.000Z" itemprop="datePublished">2020-04-29</time>
 </a>
                             
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/">博客插件安装</a>
   </div>
 
                     </div>
@@ -76,34 +76,35 @@
 
                                 
 
-                                        <div class="article-entry" itemprop="articleBody">
-											
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
 
 
-											
+                                            
 
-											
-												<h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
-
+                                                
+                                                                    <p>生成Hexo 3.x和4.x的搜索数据。此插件用于生成搜索索引文件，其中包含您文章的所有必要数据，可用于为博客编写本地搜索引擎。支持XML和JSON格式输出。</p>
 <a id="more"></a>
 
-<h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
+<h2 id="1、hexo-generator-search-本地检索"><a href="#1、hexo-generator-search-本地检索" class="headerlink" title="1、hexo-generator-search 本地检索"></a>1、<a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a> 本地检索</h2><ul>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>Hexo 的配置文件 <code>_config.yml</code> 添加插件配置（注意：不是主题的配置文件）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br></pre></td></tr></table></figure>
 
-<h1 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="2、效果演示"><a href="#2、效果演示" class="headerlink" title="2、效果演示"></a>2、效果演示</h2><p><img src="/2020/04/29/Hexo-Generator-Search/search.png" alt="search"></p>
 
-<h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
-
-
-											
-										</div>
+                                                                        
+                                    </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/" data-id="ck9k0rbnn000288lk66eggk7t" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/29/Hexo-Generator-Search/" data-id="ck9mileao0008bwlk8soc4w9b" class="article-share-link">
                                             分享
                                         </a>
                                         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/search/" rel="tag">search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag">插件</a></li></ul>
 
                                     </footer>
 
@@ -113,19 +114,19 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" class="article-nav-link">
+      <a href="/2020/04/29/Hexo-Generate-Feed/" class="article-nav-link">
         <strong class="article-nav-caption">前一篇</strong>
         <div class="article-nav-title">
           
-            Centos7系统Docker的安装配置
+            RSS订阅插件hexo-generate-feed的支持
           
         </div>
       </a>
     
     
-      <a href="/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
+      <a href="/2020/04/29/Hexo-Gitalk/" class="article-nav-link">
         <strong class="article-nav-caption">后一篇</strong>
-        <div class="article-nav-title">Hexo搭建Blog步骤</div>
+        <div class="article-nav-title">集成评论Gitalk的支持</div>
       </a>
     
   </nav>
@@ -166,7 +167,6 @@
 
 </article>
 </section>
-
   <footer class="footer">
   <div class="outer">
     <div class="float-right">
@@ -181,7 +181,8 @@
     <ul class="list-inline">
       <li>&copy; 2020 Monk&#39;s Blog</li>
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://www.it-max.cn">Monk</a></li>
+      <li>Author <a href="https://www.it-max.cn">Monk</a></li>
+	  <li>Record <a href="#">豫ICP备20004811号-1</a></li>
     </ul>
   </div>
 </footer>
@@ -207,6 +208,14 @@
     
       <li class="nav-item">
         <a class="nav-item-link" href="/gallery">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/categories">分类</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/tags">标签</a>
       </li>
     
       <li class="nav-item">
@@ -285,5 +294,16 @@
 <script src="/js/ocean.js"></script>
 
 
-</body>
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+   
+<script src="/js/anime.min.js"></script>
+
+   
+<script src="/js/fireworks.js"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

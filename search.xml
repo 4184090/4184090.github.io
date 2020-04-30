@@ -2,21 +2,22 @@
 <search>
   <entry>
     <title>Hexo搭建Blog步骤</title>
-    <url>/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h1><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
+    <url>/2020/04/28/Hexo-Create-Blog/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo是一个快速，简单且功能强大的博客框架。您使用<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。</p>
 <a id="more"></a>
 
+<h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h2><p>Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git教程</a></p>
 <p>windows：到git官网上下载,<a href="https://gitforwindows.org/" target="_blank" rel="noopener">Download git</a>,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。<br>linux：对linux来说实在是太简单了，因为最早的git就是在linux上编写的，只需要一行代码</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h1><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>windows：nodejs选择LTS版本就行了。<br>linux：</p>
+<h2 id="2-安装Node-js"><a href="#2-安装Node-js" class="headerlink" title="2. 安装Node.js"></a>2. 安装Node.js</h2><p>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。<br>windows：nodejs选择LTS版本就行了。<br>linux：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
 
 <p>安装完后，打开命令行</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
 <p>检查一下有没有安装成功<br>顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用。</p>
-<h1 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3. 安装Hexo"></a>3. 安装Hexo</h1><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹hexo，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。<br>输入命令</p>
+<h2 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3. 安装Hexo"></a>3. 安装Hexo</h2><p>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹hexo，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。<br>输入命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>依旧用hexo -v查看一下版本<br>至此就全部安装完了。<br>接下来初始化一下hexo</p>
@@ -30,8 +31,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
 <p>打开hexo的服务，在浏览器输入<a href="http://localhost:4000/" target="_blank" rel="noopener">localhost:4000</a>就可以看到你生成的博客了。<br>然后使用ctrl+c可以把服务关掉。</p>
-<h1 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4.GitHub创建个人仓库"></a>4.GitHub创建个人仓库</h1><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br>点击create repository。</p>
-<h1 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h1><p>回到你的git bash中，</p>
+<h2 id="4-GitHub创建个人仓库"><a href="#4-GitHub创建个人仓库" class="headerlink" title="4.GitHub创建个人仓库"></a>4.GitHub创建个人仓库</h2><p>首先，你先要有一个GitHub账户，去注册一个吧。<br>注册完登录后，在GitHub.com中看到一个New repository，新建仓库<br>创建一个和你用户名相同的仓库，后面加.github.io，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是xxxx.github.io，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。<br>点击create repository。</p>
+<h2 id="5-生成SSH添加到GitHub"><a href="#5-生成SSH添加到GitHub" class="headerlink" title="5.生成SSH添加到GitHub"></a>5.生成SSH添加到GitHub</h2><p>回到你的git bash中，</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
 <p>如果没有的话，说明是第一次，需要设置一下</p>
@@ -46,7 +47,7 @@
 <p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。<br>在gitbash中，查看是否成功</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<h1 id="6-将Hexo部署到GitHub"><a href="#6-将Hexo部署到GitHub" class="headerlink" title="6.将Hexo部署到GitHub"></a>6.将Hexo部署到GitHub</h1><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
+<h2 id="6-将Hexo部署到GitHub"><a href="#6-将Hexo部署到GitHub" class="headerlink" title="6.将Hexo部署到GitHub"></a>6.将Hexo部署到GitHub</h2><p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 <p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
@@ -66,21 +67,243 @@
       </tags>
   </entry>
   <entry>
-    <title>Centos7系统Docker的安装配置</title>
-    <url>/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
+    <title>RSS订阅插件hexo-generate-feed的支持</title>
+    <url>/2020/04/29/Hexo-Generate-Feed/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS 可以生成Atom 1.0或RSS 2.0 feed。</p>
 <a id="more"></a>
 
-<h1 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+<h3 id="1、hexo-generate-feed-RSS"><a href="#1、hexo-generate-feed-RSS" class="headerlink" title="1、hexo-generate-feed RSS"></a>1、<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS</h3><ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>Hexo 的配置文件 <code>_config.yml</code> 添加插件配置（注意：不是主题的配置文件）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">     <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">     <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">     <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">     <span class="attr">hub:</span></span><br><span class="line">     <span class="attr">content:</span></span><br><span class="line">     <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">     <span class="attr">content_limit_delim:</span> <span class="string">' '</span></span><br><span class="line">     <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2、效果演示"><a href="#2、效果演示" class="headerlink" title="2、效果演示"></a>2、效果演示</h3><p><img src="/2020/04/29/Hexo-Generate-Feed/feed.png" alt="feed"></p>
+]]></content>
+      <categories>
+        <category>博客插件安装</category>
+      </categories>
+      <tags>
+        <tag>RSS</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搜索插件hexo-gennerator-search的支持</title>
+    <url>/2020/04/29/Hexo-Generator-Search/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>生成Hexo 3.x和4.x的搜索数据。此插件用于生成搜索索引文件，其中包含您文章的所有必要数据，可用于为博客编写本地搜索引擎。支持XML和JSON格式输出。</p>
+<a id="more"></a>
 
-<h1 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+<h2 id="1、hexo-generator-search-本地检索"><a href="#1、hexo-generator-search-本地检索" class="headerlink" title="1、hexo-generator-search 本地检索"></a>1、<a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a> 本地检索</h2><ul>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>Hexo 的配置文件 <code>_config.yml</code> 添加插件配置（注意：不是主题的配置文件）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br></pre></td></tr></table></figure>
 
-<h1 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="2、效果演示"><a href="#2、效果演示" class="headerlink" title="2、效果演示"></a>2、效果演示</h2><p><img src="/2020/04/29/Hexo-Generator-Search/search.png" alt="search"></p>
+]]></content>
+      <categories>
+        <category>博客插件安装</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+        <tag>search</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>集成评论Gitalk的支持</title>
+    <url>/2020/04/29/Hexo-Gitalk/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>由于我比较笨还英文不好，所以按照 <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">Gitalk</a> 提供的文档给 Hexo 添加评论功能，简直就是不能行！各种报错后，翻看 Issues、Google、百度… 用了一天时间终于 Gitalk 可用了。<br>这里我分享一下我的添加过程与报错问题的解决方法，供参考借鉴！</p>
+<a id="more"></a>
+
+<h2 id="添加过程"><a href="#添加过程" class="headerlink" title="添加过程"></a>添加过程</h2><h3 id="申请-GitHub-Application"><a href="#申请-GitHub-Application" class="headerlink" title="申请 GitHub Application"></a>申请 GitHub Application</h3><p>如果有的话在 Github 中 <code>settings / Developer settings</code> 选择一个 OAuth App，如果没有 <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击这里申请</a>，我是第一次使用，自然需要从申请开始。</p>
+<p><img src="/2020/04/29/Hexo-Gitalk/OAuth-App.png" alt="OAuth-App"></p>
+<p>说明一下：</p>
+<ul>
+<li>Application name: 没有限制的 APP 名称，比如：Hexo-application</li>
+<li>Homepage URL: 网站的主页，我理解就是根目录，比如：<a href="https://www.it-max.cn/">https://www.it-max.cn</a></li>
+<li>Application description: 描述，非必填，我当时没有写。</li>
+<li>Authorization callback URL: 回调 url 我理解就是网站的域名，比如：<a href="https://www.it-max.cn">https://www.it-max.cn</a></li>
+</ul>
+<p>然后申请成功后，就看到有了 Client ID 与 Client Secret 的一个页面，页面下边就是申请刚填写的的信息，均可以再次编辑！ 只有 Client ID 与 Client Secret 是在配置 Hexo 的时候需要用。</p>
+<p><img src="/2020/04/29/Hexo-Gitalk/gitalk.png" alt="gitalk"></p>
+<blockquote>
+<p>看见好多网友做截图时候把 Client ID 与 Client Secret 打码，我有一种木有必要的感觉…</p>
+</blockquote>
+<h3 id="在-Hexo-主题设计中引入-Gitalk"><a href="#在-Hexo-主题设计中引入-Gitalk" class="headerlink" title="在 Hexo 主题设计中引入 Gitalk"></a>在 Hexo 主题设计中引入 Gitalk</h3><p>这个看 <a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">Gitalk</a> 里面的引入方法就可以了</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h3><p>在 GitHub 中 创建一个仓库用来存放评论，因为 Gitalk 的评论其实是在 GitHub 仓库自动创建 Issue 。</p>
+<h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>这个一定要<strong>仔细</strong>，不管是创建一个 comment.ejs 或者 gitalk.ejs 模板文件，还是直接在 post.ejs 模板页中写入，用法都是一样的。因为 Gitalk 是在文章的最底部出现，所以我不选择在 head 中引入 css 与 js ，当然这么做可能不是很规范。</p>
+<blockquote>
+<p>因为我主题是用 ejs 写的，所以 ejs 为例，创建一个 gitalk.ejs 代码如下</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.gitalk.enable) &#123; %&gt;  &#x2F;&#x2F; 这里判断主题是否开启评论</span><br><span class="line">  &lt;div id&#x3D;&quot;gitalk-container&quot;&gt;&lt;&#x2F;div&gt;  &#x2F;&#x2F; 盛放 Gitalk 的容器</span><br><span class="line">  &lt;%- css(&#39;https:&#x2F;&#x2F;unpkg.com&#x2F;gitalk&#x2F;dist&#x2F;gitalk.css&#39;) %&gt;</span><br><span class="line">  &lt;%- js(&#39;https:&#x2F;&#x2F;unpkg.com&#x2F;gitalk&#x2F;dist&#x2F;gitalk.min.js&#39;) %&gt;</span><br><span class="line">  &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">      var gitalk &#x3D; new Gitalk(&#123;</span><br><span class="line">        clientID: &#39;&lt;%- theme.gitalk.clientID %&gt;&#39;,  &#x2F;&#x2F; 这里一定要注意主题 config.yml 中 clientID 的大小写，否则参数传不过来，对应下边的 &quot;问题一&quot;</span><br><span class="line">        clientSecret: &#39;&lt;%- theme.gitalk.clientSecret %&gt;&#39;,</span><br><span class="line">        repo: &#39;&lt;%- theme.gitalk.repo %&gt;&#39;,</span><br><span class="line">        owner: &#39;&lt;%- theme.gitalk.owner %&gt;&#39;,</span><br><span class="line">        admin: [&#39;&lt;%- theme.gitalk.admin %&gt;&#39;],</span><br><span class="line">        id: location.pathname,      &#x2F;&#x2F; 保持默认，官方注释（Ensure uniqueness and length less than 50），文章 URL 不能太长 &quot;问题二&quot;</span><br><span class="line">        distractionFreeMode: false  &#x2F;&#x2F; 不喜欢评论时候的遮盖层所以选择 false ，而且我觉得这个也没有必要放在 config.yml 中配置</span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">  gitalk.render(&#39;gitalk-container&#39;)</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 article.ejs（模板页名称因主题而异）中 include gitalk.ejs 因为我只需要在 post 中加入评论功能其他页面不需要所以做了 post 判断！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (is_post()) &#123; %&gt;</span><br><span class="line">  &lt;%- partial(&#39;post&#x2F;gitalk&#39;) %&gt;</span><br><span class="line">&lt;%&#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后在主题 config.yml 中添加配置参数，注意 <code>repo</code> <strong>只需要写名称</strong>。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Gitalk</span></span><br><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">b056dd67656dd67522d6</span>  <span class="comment"># 换成你申请 GitHub Application 网页上对应的 Client ID 与 Client Secret 参数</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">05c56dd6736f12ac156dd6711956dd67e156dd67</span>  <span class="comment"># 同上</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">gitalk</span>  <span class="comment"># 换成你创建的仓库，首先确保该仓库已经创建，其次只需要写名称，比如 "gitalk"，否则 "问题三"</span></span><br><span class="line">  <span class="attr">owner:</span>   <span class="comment"># 你的 Github ID（Github 用户名）</span></span><br><span class="line">  <span class="attr">admin:</span>   <span class="comment"># 你的 Github ID 就可以，官方注释（Facebook-like distraction free mode）说明还可以添加其他有权限的人</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p><img src="/2020/04/29/Hexo-Gitalk/gitalk-xg.png" alt="gitalk-xg"></p>
+]]></content>
+      <categories>
+        <category>博客插件安装</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+        <tag>Gitalk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>音乐插件MetingJS的支持</title>
+    <url>/2020/04/29/hexo-Tag-Aplayer/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一款好用的音乐播放器插件，支持 QQ 音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放。<br>github 地址：<a href="https://github.com/MoePlayer/hexo-tag-aplayer" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-aplayer</a><br>官方文档：<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md</a></p>
+<a id="more"></a>
+
+<h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2>
+    <div id="aplayer-cIySuBKT" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+
+<p>对比网易云的网页嵌入式插件</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="400" height="120" src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=66"></iframe>
+
+
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>
+
+<h2 id="MeingJS-支持"><a href="#MeingJS-支持" class="headerlink" title="MeingJS 支持"></a>MeingJS 支持</h2><p>关于本地歌曲的播放，暂不介绍。<br>通过对 <a href="https://github.com/metowolf/Meting" target="_blank" rel="noopener">Meting API</a> 的引用，播放器将支持对于 QQ 音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>Hexo 配置文件<code>_config.yml</code> 中设置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>复制</p>
+<h3 id="文章插入音乐"><a href="#文章插入音乐" class="headerlink" title="文章插入音乐"></a>文章插入音乐</h3><p>通过以下实例在文章中使用 MetingJS 播放器。</p>
+<figure class="highlight md"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 简单示例 (id, server, type)  --&gt;</span></span></span><br><span class="line">&#123;% meting "22707008" "netease" "song" %&#125;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 进阶示例 --&gt;</span></span></span><br><span class="line">&#123;% meting "22707008" "netease" "song" "autoplay" "mutex:ture" "listmaxheight:340px" "preload:none" "theme:#ad7a86"%&#125;</span><br></pre></td></tr></table></figure>
+
+<p>复制</p>
+<p>有关选项表如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">id</td>
+<td align="left"><strong>必须值</strong></td>
+<td align="left">歌曲 id / 播放列表 id / 相册 id / 搜索关键字</td>
+</tr>
+<tr>
+<td align="left">server</td>
+<td align="left"><strong>必须值</strong></td>
+<td align="left">音乐平台: <code>netease</code>, <code>tencent</code>, <code>kugou</code>, <code>xiami</code>, <code>baidu</code></td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left"><strong>必须值</strong></td>
+<td align="left"><code>song</code>, <code>playlist</code>, <code>album</code>, <code>search</code>, <code>artist</code></td>
+</tr>
+<tr>
+<td align="left">fixed</td>
+<td align="left"><code>false</code></td>
+<td align="left">开启固定模式</td>
+</tr>
+<tr>
+<td align="left">mini</td>
+<td align="left"><code>false</code></td>
+<td align="left">开启迷你模式</td>
+</tr>
+<tr>
+<td align="left">loop</td>
+<td align="left"><code>all</code></td>
+<td align="left">列表循环模式：<code>all</code>, <code>one</code>,<code>none</code></td>
+</tr>
+<tr>
+<td align="left">order</td>
+<td align="left"><code>list</code></td>
+<td align="left">列表播放模式： <code>list</code>, <code>random</code></td>
+</tr>
+<tr>
+<td align="left">volume</td>
+<td align="left">0.7</td>
+<td align="left">播放器音量</td>
+</tr>
+<tr>
+<td align="left">lrctype</td>
+<td align="left">0</td>
+<td align="left">歌词格式类型</td>
+</tr>
+<tr>
+<td align="left">listfolded</td>
+<td align="left"><code>false</code></td>
+<td align="left">指定音乐播放列表是否折叠</td>
+</tr>
+<tr>
+<td align="left">storagename</td>
+<td align="left"><code>metingjs</code></td>
+<td align="left">LocalStorage 中存储播放器设定的键名</td>
+</tr>
+<tr>
+<td align="left">autoplay</td>
+<td align="left"><code>true</code></td>
+<td align="left">自动播放，移动端浏览器暂时不支持此功能</td>
+</tr>
+<tr>
+<td align="left">mutex</td>
+<td align="left"><code>true</code></td>
+<td align="left">该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停</td>
+</tr>
+<tr>
+<td align="left">listmaxheight</td>
+<td align="left"><code>340px</code></td>
+<td align="left">播放列表的最大长度</td>
+</tr>
+<tr>
+<td align="left">preload</td>
+<td align="left"><code>auto</code></td>
+<td align="left">音乐文件预载入模式，可选项： <code>none</code>, <code>metadata</code>, <code>auto</code></td>
+</tr>
+<tr>
+<td align="left">theme</td>
+<td align="left"><code>#ad7a86</code></td>
+<td align="left">播放器风格色彩设置</td>
+</tr>
+</tbody></table>
+<p>感受：效果非常好，非常方便。</p>
+]]></content>
+      <categories>
+        <category>博客插件安装</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+        <tag>MetingJS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7系统Docker的安装配置</title>
+    <url>/2020/04/28/Centos7-Docker/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Docker 是一个<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 <a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>或<a href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a> 机器上，也可以实现<a href="https://baike.baidu.com/item/虚拟化/547949" target="_blank" rel="noopener">虚拟化</a>。容器是完全使用<a href="https://baike.baidu.com/item/沙箱/393318" target="_blank" rel="noopener">沙箱</a>机制，相互之间不会有任何接口。</p>
+<a id="more"></a>
+
+<h2 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
 
 <p>将下面的配置复制进去即可：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -99,18 +322,21 @@
   </entry>
   <entry>
     <title>Centos7防火墙配置</title>
-    <url>/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-
-<h1 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
-
+    <url>/2020/04/28/Centos7-Firewall/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Centos7下的防火墙默认是通过一个守护进程(firewalld)为网络(network)</p>
+<p>以及与之相关的连接(connections)和接口(interface)提供一个可信层，同时支持网络空间(Network Zone)。</p>
 <a id="more"></a>
 
-<h1 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
 
-<h1 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
+<h2 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
 
-<h1 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
+<h2 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>

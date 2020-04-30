@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.it-max.cn/"/>
-  <updated>2020-04-28T14:38:10.792Z</updated>
+  <updated>2020-04-29T14:50:42.718Z</updated>
   <id>http://www.it-max.cn/</id>
   
   <author>
@@ -17,17 +17,107 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Centos7系统Docker的安装配置</title>
-    <link href="http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
-    <id>http://www.it-max.cn/2020/04/28/Centos7%E7%B3%BB%E7%BB%9FDocker%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
-    <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T14:38:10.792Z</updated>
+    <title>RSS订阅插件hexo-generate-feed的支持</title>
+    <link href="http://www.it-max.cn/2020/04/29/Hexo-Generate-Feed/"/>
+    <id>http://www.it-max.cn/2020/04/29/Hexo-Generate-Feed/</id>
+    <published>2020-04-29T11:55:00.000Z</published>
+    <updated>2020-04-29T14:50:42.718Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1、安装必要依赖&quot;&gt;&lt;a href=&quot;#1、安装必要依赖&quot; class=&quot;headerlink&quot; title=&quot;1、安装必要依赖&quot;&gt;&lt;/a&gt;1、安装必要依赖&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install -y yum-utils device-mapper-persistent-data lvm2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;2、添加软件源信息&quot;&gt;&lt;a href=&quot;#2、添加软件源信息&quot; class=&quot;headerlink&quot; title=&quot;2、添加软件源信息&quot;&gt;&lt;/a&gt;2、添加软件源信息&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;&lt;a href=&quot;https://github.com/hexojs/hexo-generator-feed&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;hexo-generate-feed&lt;/a&gt; RSS 可以生成Atom 1.0或RSS 2.0 feed。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客插件安装" scheme="http://www.it-max.cn/categories/%E5%8D%9A%E5%AE%A2%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="RSS" scheme="http://www.it-max.cn/tags/RSS/"/>
+    
+      <category term="插件" scheme="http://www.it-max.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索插件hexo-gennerator-search的支持</title>
+    <link href="http://www.it-max.cn/2020/04/29/Hexo-Generator-Search/"/>
+    <id>http://www.it-max.cn/2020/04/29/Hexo-Generator-Search/</id>
+    <published>2020-04-29T11:50:00.000Z</published>
+    <updated>2020-04-29T14:49:51.528Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;生成Hexo 3.x和4.x的搜索数据。此插件用于生成搜索索引文件，其中包含您文章的所有必要数据，可用于为博客编写本地搜索引擎。支持XML和JSON格式输出。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客插件安装" scheme="http://www.it-max.cn/categories/%E5%8D%9A%E5%AE%A2%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="插件" scheme="http://www.it-max.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="search" scheme="http://www.it-max.cn/tags/search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集成评论Gitalk的支持</title>
+    <link href="http://www.it-max.cn/2020/04/29/Hexo-Gitalk/"/>
+    <id>http://www.it-max.cn/2020/04/29/Hexo-Gitalk/</id>
+    <published>2020-04-29T11:10:00.000Z</published>
+    <updated>2020-04-29T14:49:33.602Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于我比较笨还英文不好，所以按照 &lt;a href=&quot;https://github.com/gitalk/gitalk&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Gitalk&lt;/a&gt; 提供的文档给 Hexo 添加评论功能，简直就是不能行！各种报错后，翻看 Issues、Google、百度… 用了一天时间终于 Gitalk 可用了。&lt;br&gt;这里我分享一下我的添加过程与报错问题的解决方法，供参考借鉴！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客插件安装" scheme="http://www.it-max.cn/categories/%E5%8D%9A%E5%AE%A2%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="插件" scheme="http://www.it-max.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Gitalk" scheme="http://www.it-max.cn/tags/Gitalk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>音乐插件MetingJS的支持</title>
+    <link href="http://www.it-max.cn/2020/04/29/hexo-Tag-Aplayer/"/>
+    <id>http://www.it-max.cn/2020/04/29/hexo-Tag-Aplayer/</id>
+    <published>2020-04-29T04:21:00.000Z</published>
+    <updated>2020-04-30T08:36:32.829Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一款好用的音乐播放器插件，支持 QQ 音乐、网易云音乐、虾米、酷狗、百度等平台的音乐播放。&lt;br&gt;github 地址：&lt;a href=&quot;https://github.com/MoePlayer/hexo-tag-aplayer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/MoePlayer/hexo-tag-aplayer&lt;/a&gt;&lt;br&gt;官方文档：&lt;a href=&quot;https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客插件安装" scheme="http://www.it-max.cn/categories/%E5%8D%9A%E5%AE%A2%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    
+      <category term="插件" scheme="http://www.it-max.cn/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="MetingJS" scheme="http://www.it-max.cn/tags/MetingJS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7系统Docker的安装配置</title>
+    <link href="http://www.it-max.cn/2020/04/28/Centos7-Docker/"/>
+    <id>http://www.it-max.cn/2020/04/28/Centos7-Docker/</id>
+    <published>2020-04-28T11:46:25.000Z</published>
+    <updated>2020-04-29T00:31:10.688Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Docker 是一个&lt;a href=&quot;https://baike.baidu.com/item/开源/246339&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;开源&lt;/a&gt;的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 &lt;a href=&quot;https://baike.baidu.com/item/Linux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Linux&lt;/a&gt;或&lt;a href=&quot;https://baike.baidu.com/item/Windows/165458&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows&lt;/a&gt; 机器上，也可以实现&lt;a href=&quot;https://baike.baidu.com/item/虚拟化/547949&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;虚拟化&lt;/a&gt;。容器是完全使用&lt;a href=&quot;https://baike.baidu.com/item/沙箱/393318&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;沙箱&lt;/a&gt;机制，相互之间不会有任何接口。&lt;/p&gt;
     
     </summary>
     
@@ -43,16 +133,15 @@
   
   <entry>
     <title>Centos7防火墙配置</title>
-    <link href="http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/"/>
-    <id>http://www.it-max.cn/2020/04/28/Centos7%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</id>
+    <link href="http://www.it-max.cn/2020/04/28/Centos7-Firewall/"/>
+    <id>http://www.it-max.cn/2020/04/28/Centos7-Firewall/</id>
     <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T14:38:21.930Z</updated>
+    <updated>2020-04-29T00:41:19.321Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1、查看firewall服务状态&quot;&gt;&lt;a href=&quot;#1、查看firewall服务状态&quot; class=&quot;headerlink&quot; title=&quot;1、查看firewall服务状态&quot;&gt;&lt;/a&gt;1、查看firewall服务状态&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;systemctl status firewalld&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;2、查看firewall的状态&quot;&gt;&lt;a href=&quot;#2、查看firewall的状态&quot; class=&quot;headerlink&quot; title=&quot;2、查看firewall的状态&quot;&gt;&lt;/a&gt;2、查看firewall的状态&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;firewall-cmd --state&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;Centos7下的防火墙默认是通过一个守护进程(firewalld)为网络(network)&lt;/p&gt;
+&lt;p&gt;以及与之相关的连接(connections)和接口(interface)提供一个可信层，同时支持网络空间(Network Zone)。&lt;/p&gt;
     
     </summary>
     
@@ -66,14 +155,14 @@
   
   <entry>
     <title>Hexo搭建Blog步骤</title>
-    <link href="http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://www.it-max.cn/2020/04/28/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/"/>
+    <id>http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/</id>
     <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-28T14:37:47.345Z</updated>
+    <updated>2020-04-29T00:31:43.062Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-安装Git&quot;&gt;&lt;a href=&quot;#1-安装Git&quot; class=&quot;headerlink&quot; title=&quot;1. 安装Git&quot;&gt;&lt;/a&gt;1. 安装Git&lt;/h1&gt;&lt;p&gt;Git是目前世界上最先进的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。也就是用来管理你的hexo博客文章，上传到GitHub的工具。Git非常强大，我觉得建议每个人都去了解一下。廖雪峰老师的Git教程写的非常好，大家可以了解一下。&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/896043488029600&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Git教程&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Hexo是一个快速，简单且功能强大的博客框架。您使用&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。&lt;/p&gt;
     
     </summary>
     
