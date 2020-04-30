@@ -169,7 +169,17 @@
 <a id="more"></a>
 
 <h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2>
-    <div id="aplayer-pKrgAFFz" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-PbwNxTPC" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+
+<nav>
+<% if(theme.aplayer.enable) { %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="<%- url_for('js/APlayer_config.js') %>"></script>
+<% } %>
+</%></%></nav>
 
 <p>对比网易云的网页嵌入式插件</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="400" height="120" src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=66"></iframe>
