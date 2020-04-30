@@ -131,29 +131,6 @@
   </entry>
   
   <entry>
-    <title>Hexo搭建Blog步骤</title>
-    <link href="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/"/>
-    <id>http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/</id>
-    <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-29T00:31:43.062Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo是一个快速，简单且功能强大的博客框架。您使用&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Hexo搭建教程" scheme="http://www.it-max.cn/categories/Hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Hexo" scheme="http://www.it-max.cn/tags/Hexo/"/>
-    
-      <category term="Blog" scheme="http://www.it-max.cn/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7系统Docker的安装配置</title>
     <link href="http://www.it-max.cn/2020/04/28/Centos7-Docker/"/>
     <id>http://www.it-max.cn/2020/04/28/Centos7-Docker/</id>
@@ -173,6 +150,29 @@
       <category term="Centos7" scheme="http://www.it-max.cn/tags/Centos7/"/>
     
       <category term="Docker" scheme="http://www.it-max.cn/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo搭建Blog步骤</title>
+    <link href="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/"/>
+    <id>http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/</id>
+    <published>2020-04-28T11:46:25.000Z</published>
+    <updated>2020-04-29T00:31:43.062Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo是一个快速，简单且功能强大的博客框架。您使用&lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt;（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Hexo搭建教程" scheme="http://www.it-max.cn/categories/Hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Hexo" scheme="http://www.it-max.cn/tags/Hexo/"/>
+    
+      <category term="Blog" scheme="http://www.it-max.cn/tags/Blog/"/>
     
   </entry>
   

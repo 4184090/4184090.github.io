@@ -108,7 +108,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7-Docker/" data-id="ck9ml5u9v0008rklk611j4d2m" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7-Docker/" data-id="ck9mlkpb2000200lk4btg047o" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -122,15 +122,20 @@
         
   <nav class="article-nav">
     
-      <a href="/2020/04/28/Hexo-Create-Blog/" class="article-nav-link">
+      <a href="/2020/04/28/Centos7-Firewall/" class="article-nav-link">
         <strong class="article-nav-caption">前一篇</strong>
         <div class="article-nav-title">
           
-            Hexo搭建Blog步骤
+            Centos7防火墙配置
           
         </div>
       </a>
     
+    
+      <a href="/2020/04/28/Hexo-Create-Blog/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Hexo搭建Blog步骤</div>
+      </a>
     
   </nav>
 
@@ -233,6 +238,15 @@
     </li>
   </ul>
 </nav>
+<nav>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+</nav>
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
@@ -304,31 +318,6 @@
 
    
 <script src="/js/fireworks.js"></script>
-
-
-
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-    <div id="aplayer" style="text-align:left"></div>
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
-    <script type="text/javascript" src="/js/APlayer_config.js"></script>
-    <script type="text/javascript">
-          const colorThief = new ColorThief();
-          const setTheme = (index) => {
-            if (!ap.list.audios[index].theme) {
-              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-              });
-            }
-          };
-          setTheme(ap.list.index);
-          ap.on('listswitch', (data) => {
-            setTheme(data.index);
-          });       
-    </script>
-
 
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
