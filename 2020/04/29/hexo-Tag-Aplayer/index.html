@@ -90,7 +90,7 @@
 <a id="more"></a>
 
 <h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2>
-    <div id="aplayer-QwXhxFnR" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-oEhQLbRB" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>对比网易云的网页嵌入式插件</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="400" height="120" src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=66"></iframe>
@@ -203,7 +203,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/29/hexo-Tag-Aplayer/" data-id="ck9minlom000e88lkafcfg3be" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/29/hexo-Tag-Aplayer/" data-id="ck9ml5ua4000erklkflo6funk" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -227,9 +227,9 @@
       </a>
     
     
-      <a href="/2020/04/28/Centos7-Docker/" class="article-nav-link">
+      <a href="/2020/04/28/Centos7-Firewall/" class="article-nav-link">
         <strong class="article-nav-caption">后一篇</strong>
-        <div class="article-nav-title">Centos7系统Docker的安装配置</div>
+        <div class="article-nav-title">Centos7防火墙配置</div>
       </a>
     
   </nav>
@@ -405,6 +405,29 @@
    
 <script src="/js/fireworks.js"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
 
 

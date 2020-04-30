@@ -141,7 +141,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/" data-id="ck9minloe000788lk20vj3ty5" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Hexo-Create-Blog/" data-id="ck9ml5u9q0006rklkcpsf4qgz" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -164,6 +164,11 @@
         </div>
       </a>
     
+    
+      <a href="/2020/04/28/Centos7-Docker/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">Centos7系统Docker的安装配置</div>
+      </a>
     
   </nav>
 
@@ -338,6 +343,29 @@
    
 <script src="/js/fireworks.js"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
 
 

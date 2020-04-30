@@ -109,29 +109,6 @@
   </entry>
   
   <entry>
-    <title>Centos7系统Docker的安装配置</title>
-    <link href="http://www.it-max.cn/2020/04/28/Centos7-Docker/"/>
-    <id>http://www.it-max.cn/2020/04/28/Centos7-Docker/</id>
-    <published>2020-04-28T11:46:25.000Z</published>
-    <updated>2020-04-29T00:31:10.688Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Docker 是一个&lt;a href=&quot;https://baike.baidu.com/item/开源/246339&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;开源&lt;/a&gt;的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 &lt;a href=&quot;https://baike.baidu.com/item/Linux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Linux&lt;/a&gt;或&lt;a href=&quot;https://baike.baidu.com/item/Windows/165458&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows&lt;/a&gt; 机器上，也可以实现&lt;a href=&quot;https://baike.baidu.com/item/虚拟化/547949&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;虚拟化&lt;/a&gt;。容器是完全使用&lt;a href=&quot;https://baike.baidu.com/item/沙箱/393318&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;沙箱&lt;/a&gt;机制，相互之间不会有任何接口。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Docker教程" scheme="http://www.it-max.cn/categories/Docker%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="Centos7" scheme="http://www.it-max.cn/tags/Centos7/"/>
-    
-      <category term="Docker" scheme="http://www.it-max.cn/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Centos7防火墙配置</title>
     <link href="http://www.it-max.cn/2020/04/28/Centos7-Firewall/"/>
     <id>http://www.it-max.cn/2020/04/28/Centos7-Firewall/</id>
@@ -173,6 +150,29 @@
       <category term="Hexo" scheme="http://www.it-max.cn/tags/Hexo/"/>
     
       <category term="Blog" scheme="http://www.it-max.cn/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7系统Docker的安装配置</title>
+    <link href="http://www.it-max.cn/2020/04/28/Centos7-Docker/"/>
+    <id>http://www.it-max.cn/2020/04/28/Centos7-Docker/</id>
+    <published>2020-04-28T11:46:25.000Z</published>
+    <updated>2020-04-29T00:31:10.688Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Docker 是一个&lt;a href=&quot;https://baike.baidu.com/item/开源/246339&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;开源&lt;/a&gt;的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 &lt;a href=&quot;https://baike.baidu.com/item/Linux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Linux&lt;/a&gt;或&lt;a href=&quot;https://baike.baidu.com/item/Windows/165458&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows&lt;/a&gt; 机器上，也可以实现&lt;a href=&quot;https://baike.baidu.com/item/虚拟化/547949&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;虚拟化&lt;/a&gt;。容器是完全使用&lt;a href=&quot;https://baike.baidu.com/item/沙箱/393318&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;沙箱&lt;/a&gt;机制，相互之间不会有任何接口。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Docker教程" scheme="http://www.it-max.cn/categories/Docker%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Centos7" scheme="http://www.it-max.cn/tags/Centos7/"/>
+    
+      <category term="Docker" scheme="http://www.it-max.cn/tags/Docker/"/>
     
   </entry>
   

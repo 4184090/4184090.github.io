@@ -53,35 +53,6 @@
           <article class="archive-article archive-type-post">
   <div class="archive-article-inner">
     <header class="archive-article-header">
-      <a href="/2020/04/28/Centos7-Docker/" class="archive-article-date">
-  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">04/28</time>
-</a>
-      
-  
-    <h2 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/28/Centos7-Docker/">Centos7系统Docker的安装配置</a>
-    </h2>
-  
-  
-
-
-
-
-    </header>
-    
-    
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
-
-    
-  </div>
-</article>
-          
-        
-        
-          <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
       <a href="/2020/04/28/Centos7-Firewall/" class="archive-article-date">
   <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">04/28</time>
 </a>
@@ -101,6 +72,35 @@
     
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
+
+    
+  </div>
+</article>
+          
+        
+        
+          <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/04/28/Centos7-Docker/" class="archive-article-date">
+  <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">04/28</time>
+</a>
+      
+  
+    <h2 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/28/Centos7-Docker/">Centos7系统Docker的安装配置</a>
+    </h2>
+  
+  
+
+
+
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
 
     
   </div>
@@ -230,6 +230,29 @@
    
 <script src="/js/fireworks.js"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
 
 

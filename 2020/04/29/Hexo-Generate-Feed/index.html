@@ -100,7 +100,7 @@
                                                                         
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/29/Hexo-Generate-Feed/" data-id="ck9minlog000988lkb0f9fp7g" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/29/Hexo-Generate-Feed/" data-id="ck9ml5u910000rklk40fnf9ga" class="article-share-link">
                                             分享
                                         </a>
                                         
@@ -293,6 +293,29 @@
    
 <script src="/js/fireworks.js"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
 
 

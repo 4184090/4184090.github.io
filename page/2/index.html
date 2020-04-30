@@ -67,7 +67,7 @@
       <h1 class="page-type-title"></h1>
       
         
-          <article id="post-Centos7-Firewall" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+          <article id="post-Centos7-Docker" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
 
     <div class="article-inner">
         
@@ -75,7 +75,7 @@
                 
   
     <h2 itemprop="name">
-      <a class="article-title" href="/2020/04/28/Centos7-Firewall/">Centos7防火墙配置</a>
+      <a class="article-title" href="/2020/04/28/Centos7-Docker/">Centos7系统Docker的安装配置</a>
     </h2>
   
   
@@ -88,12 +88,12 @@
 
                 
                     <div class="article-meta">
-                        <a href="/2020/04/28/Centos7-Firewall/" class="article-date">
+                        <a href="/2020/04/28/Centos7-Docker/" class="article-date">
   <time datetime="2020-04-28T11:46:25.000Z" itemprop="datePublished">2020-04-28</time>
 </a>
                             
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Centos7%E7%9B%B8%E5%85%B3%E6%95%99%E7%A8%8B/">Centos7相关教程</a>
+    <a class="article-category-link" href="/categories/Docker%E6%95%99%E7%A8%8B/">Docker教程</a>
   </div>
 
                     </div>
@@ -108,21 +108,20 @@
                                             
 
                                                 
-                                                    <p>Centos7下的防火墙默认是通过一个守护进程(firewalld)为网络(network)</p>
-<p>以及与之相关的连接(connections)和接口(interface)提供一个可信层，同时支持网络空间(Network Zone)。</p>
+                                                    <p>Docker 是一个<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 <a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>或<a href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a> 机器上，也可以实现<a href="https://baike.baidu.com/item/虚拟化/547949" target="_blank" rel="noopener">虚拟化</a>。容器是完全使用<a href="https://baike.baidu.com/item/沙箱/393318" target="_blank" rel="noopener">沙箱</a>机制，相互之间不会有任何接口。</p>
                                                         
-                                                            <a class="article-more-link" href="/2020/04/28/Centos7-Firewall/">
+                                                            <a class="article-more-link" href="/2020/04/28/Centos7-Docker/">
                                                                 Read More...
                                                             </a>
                                                             
                                                                 
                                     </div>
                                     <footer class="article-footer">
-                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7-Firewall/" data-id="ck9minlo7000388lkgfvx3n8o" class="article-share-link">
+                                        <a data-url="http://www.it-max.cn/2020/04/28/Centos7-Docker/" data-id="ck9ml5u9v0008rklk611j4d2m" class="article-share-link">
                                             分享
                                         </a>
                                         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos7/" rel="tag">Centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li></ul>
 
                                     </footer>
 
@@ -263,6 +262,29 @@
    
 <script src="/js/fireworks.js"></script>
 
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <div id="aplayer" style="text-align:left"></div>
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+    <script type="text/javascript" src="/js/APlayer_config.js"></script>
+    <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });       
+    </script>
 
 
 

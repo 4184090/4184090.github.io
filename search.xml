@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>RSS订阅插件hexo-generate-feed的支持</title>
+    <url>/2020/04/29/Hexo-Generate-Feed/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS 可以生成Atom 1.0或RSS 2.0 feed。</p>
+<a id="more"></a>
+
+<h3 id="1、hexo-generate-feed-RSS"><a href="#1、hexo-generate-feed-RSS" class="headerlink" title="1、hexo-generate-feed RSS"></a>1、<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS</h3><ul>
+<li><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>Hexo 的配置文件 <code>_config.yml</code> 添加插件配置（注意：不是主题的配置文件）：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">     <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">     <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">     <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">     <span class="attr">hub:</span></span><br><span class="line">     <span class="attr">content:</span></span><br><span class="line">     <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">     <span class="attr">content_limit_delim:</span> <span class="string">' '</span></span><br><span class="line">     <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2、效果演示"><a href="#2、效果演示" class="headerlink" title="2、效果演示"></a>2、效果演示</h3><p><img src="/2020/04/29/Hexo-Generate-Feed/feed.png" alt="feed"></p>
+]]></content>
+      <categories>
+        <category>博客插件安装</category>
+      </categories>
+      <tags>
+        <tag>RSS</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7防火墙配置</title>
+    <url>/2020/04/28/Centos7-Firewall/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Centos7下的防火墙默认是通过一个守护进程(firewalld)为网络(network)</p>
+<p>以及与之相关的连接(connections)和接口(interface)提供一个可信层，同时支持网络空间(Network Zone)。</p>
+<a id="more"></a>
+
+
+<h2 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Centos7相关教程</category>
+      </categories>
+      <tags>
+        <tag>Centos7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo搭建Blog步骤</title>
     <url>/2020/04/28/Hexo-Create-Blog/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Hexo是一个快速，简单且功能强大的博客框架。您使用<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他标记语言）编写帖子，然后Hexo会在几秒钟内生成带有精美主题的静态文件。</p>
@@ -67,28 +118,36 @@
       </tags>
   </entry>
   <entry>
-    <title>RSS订阅插件hexo-generate-feed的支持</title>
-    <url>/2020/04/29/Hexo-Generate-Feed/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS 可以生成Atom 1.0或RSS 2.0 feed。</p>
+    <title>Centos7系统Docker的安装配置</title>
+    <url>/2020/04/28/Centos7-Docker/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Docker 是一个<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 <a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>或<a href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a> 机器上，也可以实现<a href="https://baike.baidu.com/item/虚拟化/547949" target="_blank" rel="noopener">虚拟化</a>。容器是完全使用<a href="https://baike.baidu.com/item/沙箱/393318" target="_blank" rel="noopener">沙箱</a>机制，相互之间不会有任何接口。</p>
 <a id="more"></a>
 
-<h3 id="1、hexo-generate-feed-RSS"><a href="#1、hexo-generate-feed-RSS" class="headerlink" title="1、hexo-generate-feed RSS"></a>1、<a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generate-feed</a> RSS</h3><ul>
-<li><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置<br>Hexo 的配置文件 <code>_config.yml</code> 添加插件配置（注意：不是主题的配置文件）：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">     <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">     <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">     <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">     <span class="attr">hub:</span></span><br><span class="line">     <span class="attr">content:</span></span><br><span class="line">     <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">     <span class="attr">content_limit_delim:</span> <span class="string">' '</span></span><br><span class="line">     <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
+<h2 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
 
-</li>
+<h2 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<p>将下面的配置复制进去即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
 </ul>
-<h3 id="2、效果演示"><a href="#2、效果演示" class="headerlink" title="2、效果演示"></a>2、效果演示</h3><p><img src="/2020/04/29/Hexo-Generate-Feed/feed.png" alt="feed"></p>
 ]]></content>
       <categories>
-        <category>博客插件安装</category>
+        <category>Docker教程</category>
       </categories>
       <tags>
-        <tag>RSS</tag>
-        <tag>插件</tag>
+        <tag>Centos7</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -169,7 +228,7 @@
 <a id="more"></a>
 
 <h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2>
-    <div id="aplayer-QwXhxFnR" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-oEhQLbRB" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22707008" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>对比网易云的网页嵌入式插件</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="400" height="120" src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=66"></iframe>
@@ -285,65 +344,6 @@
       <tags>
         <tag>插件</tag>
         <tag>MetingJS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7系统Docker的安装配置</title>
-    <url>/2020/04/28/Centos7-Docker/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Docker 是一个<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 <a href="https://baike.baidu.com/item/Linux" target="_blank" rel="noopener">Linux</a>或<a href="https://baike.baidu.com/item/Windows/165458" target="_blank" rel="noopener">Windows</a> 机器上，也可以实现<a href="https://baike.baidu.com/item/虚拟化/547949" target="_blank" rel="noopener">虚拟化</a>。容器是完全使用<a href="https://baike.baidu.com/item/沙箱/393318" target="_blank" rel="noopener">沙箱</a>机制，相互之间不会有任何接口。</p>
-<a id="more"></a>
-
-<h2 id="1、安装必要依赖"><a href="#1、安装必要依赖" class="headerlink" title="1、安装必要依赖"></a>1、安装必要依赖</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、添加软件源信息"><a href="#2、添加软件源信息" class="headerlink" title="2、添加软件源信息"></a>2、添加软件源信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、更新-yum-缓存"><a href="#3、更新-yum-缓存" class="headerlink" title="3、更新 yum 缓存"></a>3、更新 yum 缓存</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、安装-Docker"><a href="#4、安装-Docker" class="headerlink" title="4、安装 Docker"></a>4、安装 Docker</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、启动-Docker-后台服务"><a href="#5、启动-Docker-后台服务" class="headerlink" title="5、启动 Docker 后台服务"></a>5、启动 Docker 后台服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h2 id="6、镜像加速"><a href="#6、镜像加速" class="headerlink" title="6、镜像加速"></a>6、镜像加速</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新建 daemon.json 文件</span></span><br><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
-
-<p>将下面的配置复制进去即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"http://hub-mirror.c.163.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注意：修改完配置文件之后需要执行 <code>systemctl docker restart</code> 才可生效。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Docker教程</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Centos7防火墙配置</title>
-    <url>/2020/04/28/Centos7-Firewall/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Centos7下的防火墙默认是通过一个守护进程(firewalld)为网络(network)</p>
-<p>以及与之相关的连接(connections)和接口(interface)提供一个可信层，同时支持网络空间(Network Zone)。</p>
-<a id="more"></a>
-
-
-<h2 id="1、查看firewall服务状态"><a href="#1、查看firewall服务状态" class="headerlink" title="1、查看firewall服务状态"></a>1、查看firewall服务状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、查看firewall的状态"><a href="#2、查看firewall的状态" class="headerlink" title="2、查看firewall的状态"></a>2、查看firewall的状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --state</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、开启、重启、关闭、firewalld-service服务"><a href="#3、开启、重启、关闭、firewalld-service服务" class="headerlink" title="3、开启、重启、关闭、firewalld.service服务"></a>3、开启、重启、关闭、firewalld.service服务</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br></pre></td></tr></table></figure>
-
-<h2 id="4、查看防火墙规则"><a href="#4、查看防火墙规则" class="headerlink" title="4、查看防火墙规则"></a>4、查看防火墙规则</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br></pre></td></tr></table></figure>
-
-<h2 id="5、查询、开放、关闭端口"><a href="#5、查询、开放、关闭端口" class="headerlink" title="5、查询、开放、关闭端口"></a>5、查询、开放、关闭端口</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Centos7相关教程</category>
-      </categories>
-      <tags>
-        <tag>Centos7</tag>
       </tags>
   </entry>
 </search>
